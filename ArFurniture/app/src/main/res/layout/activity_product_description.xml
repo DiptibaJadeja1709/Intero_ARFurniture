@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:padding="8dp"
+        android:background="@drawable/ic_circle"
+        android:src="@drawable/ic_back"
+        android:elevation="5dp"/>
+
+    <ImageView
+        android:id="@+id/btn_wishlist"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_toStartOf="@+id/btn_cart"
+        android:background="@drawable/ic_circle"
+        android:padding="8dp"
+        android:src="@drawable/ic_heart"
+        android:elevation="5dp"/>
+
+    <ImageView
+        android:id="@+id/btn_cart"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:padding="8dp"
+        android:background="@drawable/ic_circle"
+        android:src="@drawable/ic_cart"
+        android:elevation="5dp"/>
+
+
+    <ScrollView
+        android:id="@+id/sv_description"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/porduct_shadowview"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-127dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_images"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/sv_imagesSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp"
+                    app:sliderIndicatorRadius="1.5dp"
+                    app:sliderIndicatorSelectedColor="@color/grey"
+                    app:sliderIndicatorUnselectedColor="@color/light_grey"
+                    app:sliderStartAutoCycle="false" />
+
+                <ImageView
+                    android:id="@+id/iv_arBtn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignBottom="@+id/sv_imagesSlider"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="50dp"
+                    android:padding="8dp"
+                    android:background="@drawable/ic_circle"
+                    android:src="@drawable/ic_ar_scan"
+                    android:elevation="5dp"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_images">
+
+                <ImageView
+                    android:id="@+id/iv_addCartBtn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_add_cart" />
+
+                <TextView
+                    android:id="@+id/tv_product_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/raleway_regular"
+                    android:text="Sofa"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/text_x_large" />
+
+                <TextView
+                    android:id="@+id/tv_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_product_name"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/raleway_regular"
+                    android:text="Description"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/text_medium" />
+
+                <TextView
+                    android:id="@+id/product_dsc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_desc"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/raleway_regular"
+                    android:justificationMode="inter_word"
+                    android:text="Raleway is an elegant sans-serif typeface, designed in a single thin weight. It is a display face that features both old style and lining numerals, standard and discretionary ligatures, a pretty complete set of diacritics, as well as a stylistic alternate inspired by more geometric sans-serif typefaces than it's neo-grotesque inspired default character set.Raleway is an elegant sans-serif typeface, designed in a single thin weight. It is a display face that features both old style and lining numerals, standard and discretionary ligatures, a pretty complete set of diacritics, as well as a stylistic alternate inspired by more geometric sans-serif typefaces than it's neo-grotesque inspired default character set.Raleway is an elegant sans-serif typeface, designed in a single thin weight. It is a display face that features both old style and lining numerals, standard and discretionary ligatures, a pretty complete set of diacritics, as well as a stylistic alternate inspired by more geometric sans-serif typefaces than it's neo-grotesque inspired default character set.Raleway is an elegant sans-serif typeface, designed in a single thin weight. It is a display face that features both old style and lining numerals, standard and discretionary ligatures, a pretty complete set of diacritics, as well as a stylistic alternate inspired by more geometric sans-serif typefaces than it's neo-grotesque inspired default character set.Raleway is an elegant sans-serif typeface, designed in a single thin weight. It is a display face that features both old style and lining numerals, standard and discretionary ligatures, a pretty complete set of diacritics, as well as a stylistic alternate inspired by more geometric sans-serif typefaces than it's neo-grotesque inspired default character set."
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/text_small" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/porduct_shadowview"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/white_card_view"
+        android:elevation="10dp">
+
+        <TextView
+            android:id="@+id/rupee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/raleway_medium"
+            android:text="₹ "
+            android:textColor="@color/grey"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/rupee"
+            android:fontFamily="@font/raleway_medium"
+            android:text="3000"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/button_buynow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/black_card_view"
+            android:paddingHorizontal="30dp"
+            android:text="Buy Now"
+            android:textAllCaps="false"
+            app:backgroundTint="@null"
+            tools:ignore="InvalidId" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+    <!--<com.loopeer.shadow.ShadowView
+            android:id="@+id/porduct_shadowview"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:elevation="10dp"
+            android:foreground="?attr/selectableItemBackground"
+            app:shadowMarginTop="10dp"
+            app:shadowRadius="5dp">-->
+
+    <!--</com.loopeer.shadow.ShadowView>-->
+
+    <!--app:sliderScrollTimeInSec="3"
+        app:sliderAnimationDuration="8000"
+        app:sliderAutoCycleDirection="right"-->
